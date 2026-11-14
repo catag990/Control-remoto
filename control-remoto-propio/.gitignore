@@ -1,0 +1,14 @@
+**/bin/
+**/obj/
+**/.gradle/
+**/.idea/
+**/build/
+esp32/main/server_cert.pem
+esp32/main/server_key.pem
+esp32/main/config_local.h
+esp32/device-public-info.json
+*.apk
+*.pfx
+*.key
+*pairing.png
+local-credentials*
