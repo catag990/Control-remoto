@@ -190,7 +190,7 @@ static async Task RunDesktop(WebSocket ws, CancellationToken cancel)
                 result.Count > 4096) break;
             try
             {
-                using var doc = JsonDocument.Parse(buffer.AsSpan(0, result.Count));
+                using var doc = JsonDocument.Parse(buffer.AsMemory(0, result.Count));
                 if (doc.RootElement.ValueKind != JsonValueKind.Object) continue;
                 Desktop.HandleEvent(doc.RootElement, ref monitor);
             }

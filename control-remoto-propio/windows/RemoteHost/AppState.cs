@@ -60,10 +60,12 @@ public sealed class AppState
         request.CertificateExtensions.Add(new X509SubjectKeyIdentifierExtension(request.PublicKey, false));
         using var generated = request.CreateSelfSigned(DateTimeOffset.UtcNow.AddDays(-1), DateTimeOffset.UtcNow.AddYears(3));
         // Persist through the Windows user certificate store, not a password-less file.
-        using var imported = new X509Certificate2(generated.Export(X509ContentType.Pkcs12),
-            (string?)null, X509KeyStorageFlags.PersistKeySet | X509KeyStorageFlags.UserKeySet);
+        var imported = X509CertificateLoader.LoadPkcs12(
+            generated.Export(X509ContentType.Pkcs12),
+            null,
+            X509KeyStorageFlags.PersistKeySet | X509KeyStorageFlags.UserKeySet);
         store.Add(imported);
-        return new X509Certificate2(imported);
+        return imported;
     }
 
     public PairingInfo BeginPairing(string localHost, int port)
