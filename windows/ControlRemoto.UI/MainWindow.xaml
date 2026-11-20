@@ -1,0 +1,110 @@
+<Window x:Class="ControlRemoto.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Control remoto propio" Width="1080" Height="820" MinWidth="820" MinHeight="650"
+        Background="#0D1625" FontFamily="Segoe UI" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded" Closing="Window_Closing" StateChanged="Window_StateChanged">
+    <Grid Margin="24,20,24,18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="86" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="165" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Border Background="#26415F" Width="48" Height="48" CornerRadius="12" Margin="0,0,15,0">
+                    <TextBlock Text="▣" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#70C4FF"/>
+                </Border>
+                <StackPanel>
+                    <TextBlock FontSize="22" FontWeight="Bold" Text="Control remoto propio"/>
+                    <TextBlock Style="{StaticResource MutedText}" Margin="0,5,0,0" Text="Panel de control · Windows · v0.5"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                <Border Background="#284237" CornerRadius="14" Padding="13,7" Margin="0,0,16,0">
+                    <TextBlock x:Name="ServerState" Text="Iniciando..." Foreground="#A2EDCB" FontWeight="SemiBold"/>
+                </Border>
+                <Button x:Name="StartButton" Content="Iniciar servidor" Click="Start_Click" Background="#216B9C"/>
+                <Button x:Name="StopButton" Content="Detener" Click="Stop_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,4,0,18">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="1.05*"/><ColumnDefinition Width="0.95*"/></Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="0,0,10,0">
+                <Grid.RowDefinitions><RowDefinition Height="196"/><RowDefinition Height="142"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+                <Border Grid.Row="0" Style="{StaticResource Panel}" Margin="0,0,0,12">
+                    <StackPanel>
+                        <TextBlock Text="Servidor local" Style="{StaticResource HeadingText}" Margin="0,0,0,14"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="140"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions><RowDefinition Height="30"/><RowDefinition Height="30"/><RowDefinition Height="30"/><RowDefinition Height="30"/></Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="IPv4 LAN" Style="{StaticResource MutedText}"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="LocalIp" FontWeight="SemiBold"/>
+                            <TextBlock Grid.Row="1" Text="Puerto" Style="{StaticResource MutedText}"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="TCP 8443 · TLS"/>
+                            <TextBlock Grid.Row="2" Text="ID de PC" Style="{StaticResource MutedText}"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="DeviceIdText" Text="—" TextTrimming="CharacterEllipsis"/>
+                            <TextBlock Grid.Row="3" Text="Sesión remota" Style="{StaticResource MutedText}"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="SessionText" Text="Desconectada"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="1" Style="{StaticResource Panel}" Margin="0,0,0,12">
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource HeadingText}" Text="Transmisión" Margin="0,0,0,12"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0"><TextBlock Text="FPS enviados" Style="{StaticResource MutedText}"/><TextBlock x:Name="ActualFps" Text="—" FontSize="28" FontWeight="Bold"/></StackPanel>
+                            <StackPanel Grid.Column="1"><TextBlock Text="Límite pedido" Style="{StaticResource MutedText}"/><TextBlock x:Name="RequestedFps" Text="—" FontSize="28" FontWeight="Bold"/></StackPanel>
+                            <StackPanel Grid.Column="2"><TextBlock Text="JPEG calidad" Style="{StaticResource MutedText}"/><TextBlock x:Name="JpegQuality" Text="—" FontSize="28" FontWeight="Bold"/></StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Row="2" Style="{StaticResource Panel}">
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource HeadingText}" Text="Dispositivos autorizados" Margin="0,0,0,8"/>
+                        <TextBlock Style="{StaticResource MutedText}" Text="La identidad del móvil se conserva en el servidor." Margin="0,0,0,10"/>
+                        <ListBox x:Name="DevicesList" Height="90" />
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <Button Content="Actualizar" Click="Clients_Click"/>
+                            <Button Content="Revocar seleccionado" Click="Revoke_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Border Grid.Column="1" Style="{StaticResource Panel}" Margin="10,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Style="{StaticResource HeadingText}" Text="Vincular un teléfono"/>
+                        <TextBlock Style="{StaticResource MutedText}" TextWrapping="Wrap" Margin="0,8,0,14"
+                                   Text="El QR se genera aquí y vence en tres minutos. Realiza el emparejamiento en tu Wi-Fi local."/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,12">
+                        <TextBox x:Name="IpInput" Width="170" ToolTip="IPv4 local del PC"/>
+                        <Button x:Name="PairButton" Content="Generar QR" Background="#1975AD" Margin="12,0,0,0" Click="Pair_Click" />
+                    </StackPanel>
+                    <Border Grid.Row="2" Background="#F5F7FC" CornerRadius="12" Margin="0,0,0,8" Padding="12">
+                        <Grid>
+                            <TextBlock x:Name="QrPlaceholder" Foreground="#45566D" Text="El código aparecerá aquí" FontSize="15"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Image x:Name="QrImage" Stretch="Uniform" Visibility="Collapsed"/>
+                        </Grid>
+                    </Border>
+                    <StackPanel Grid.Row="3" Margin="0,3,0,0">
+                        <TextBlock x:Name="QrCountdown" Text="QR no generado" Foreground="#D0DEED"/>
+                        <CheckBox x:Name="AutoStartCheck" Content="Iniciar panel al entrar en Windows" Foreground="#D8E5F2"
+                                  Margin="0,10,0,0"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+        <Border Grid.Row="2" Style="{StaticResource Panel}" Padding="18,12">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="Actividad del servidor" FontSize="15" FontWeight="SemiBold" Margin="0,0,0,6"/>
+                <ListBox x:Name="EventList" FontFamily="Consolas" FontSize="11" Background="#101B2B"/>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>

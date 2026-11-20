@@ -1,0 +1,9 @@
+#pragma once
+// Este archivo es solo un ejemplo, sin secretos. Ejecuta tools/provision_esp32.py.
+#define RCP_WIFI_SSID "MI_WIFI_24_GHZ"
+#define RCP_WIFI_PASSWORD "CAMBIAR"
+#define RCP_DEVICE_ID "ESP-001"
+#define RCP_SPKI_SHA256 "REEMPLAZAR_CON_HASH_SHA256_REAL"
+#define RCP_SERVO_SIGNAL_GPIO 18
+#define RCP_SERVO_RELEASE_US 1000
+#define RCP_SERVO_PRESS_US 1750

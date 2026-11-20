@@ -1,0 +1,23 @@
+# Never commit generated runtime secrets or local build files.
+**/bin/
+**/obj/
+**/.gradle/
+**/.idea/
+**/build/
+dist/
+*.apk
+*.aab
+*.pfx
+*.pem
+*.key
+*.keystore
+*.jks
+local.properties
+esp32/main/config_local.h
+esp32/main/server.crt
+esp32/main/server.key
+esp32/sdkconfig
+esp32/sdkconfig.old
+.pytest_cache/
+__pycache__/
+*.pyc

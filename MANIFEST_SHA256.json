@@ -1,0 +1,282 @@
+{
+  "package": "Control-remoto-propio-v0.5",
+  "type": "complete-source",
+  "verified_by": "python source tests; no Windows or Android SDK compilation",
+  "files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "size": 963,
+      "sha256": "afac05a8c0810c6bf7cf77edb6d6101b775d7ec8421280bd9e07dc165682f649"
+    },
+    {
+      "path": ".gitignore",
+      "size": 321,
+      "sha256": "345d50ce4a68692ee2374f7b3b586161d36f20f44bb537e4caf527a075242fb5"
+    },
+    {
+      "path": "README.md",
+      "size": 5015,
+      "sha256": "be37ebeaa614568d81dd2f92fcab61248688747486f31898c0b342c4662c80d4"
+    },
+    {
+      "path": "android/app/build.gradle.kts",
+      "size": 1397,
+      "sha256": "9b59d71d49791686fcbf14de9e8bd9b64ff65bb3fa2c2b910bf73b7dcd811d2c"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "size": 1049,
+      "sha256": "661b8f38eb367fa7c9a9d216a4d2c62d0d289fde32ca8e5b0477dfd825cc7c7c"
+    },
+    {
+      "path": "android/app/src/main/java/cl/controlremoto/app/DeviceCrypto.kt",
+      "size": 2347,
+      "sha256": "b2925e1143fbf7c3128dd150635b6ae74802fb53f8b36e2881566afee3a19e8e"
+    },
+    {
+      "path": "android/app/src/main/java/cl/controlremoto/app/HardwareH264Decoder.kt",
+      "size": 4388,
+      "sha256": "c78fb31d9d6eb8538117454d1b5d6e964a61d07d9082d34670d8a7ffa4ec8b22"
+    },
+    {
+      "path": "android/app/src/main/java/cl/controlremoto/app/MainActivity.kt",
+      "size": 18726,
+      "sha256": "154bc1efbbf0af9e5ed4ae56660c60b8613daa51081af71cc2d32832928761a7"
+    },
+    {
+      "path": "android/app/src/main/java/cl/controlremoto/app/PcKeyboardPanel.kt",
+      "size": 7835,
+      "sha256": "9ac4ed53208387399f3f3ef728ad48639f851a82ac6eb32e52aecb1361e5dbe7"
+    },
+    {
+      "path": "android/app/src/main/java/cl/controlremoto/app/PcmAudioRenderer.kt",
+      "size": 4169,
+      "sha256": "5b85b8d8d5ad5ef2ccea8fe072f142799b3c01126413ce6ada8c6758324bb77b"
+    },
+    {
+      "path": "android/app/src/main/java/cl/controlremoto/app/RemoteApi.kt",
+      "size": 8461,
+      "sha256": "855a457f4c5246ae1e9587f479af39f58106a71313d901ac32634801aa56b780"
+    },
+    {
+      "path": "android/app/src/main/java/cl/controlremoto/app/RemoteSessionScreen.kt",
+      "size": 39102,
+      "sha256": "8d2c6a90bc410f16866a7dc4cd5d0a5843921696df1017442034e9b8cc7f0dd2"
+    },
+    {
+      "path": "android/app/src/test/java/cl/controlremoto/app/SignatureEnvelopeTest.kt",
+      "size": 439,
+      "sha256": "af9fcbcfebf32ad92b2a3337df0a3b70d9076f14284df737f4a60419423881d2"
+    },
+    {
+      "path": "android/build.gradle.kts",
+      "size": 217,
+      "sha256": "c6cf6d33f0e7554953883ecb9a134c9fa001d41e61eefbcf8e8b3dd9b21110aa"
+    },
+    {
+      "path": "android/gradle.properties",
+      "size": 127,
+      "sha256": "1ae6394f060c1d81c8ba9788e9e080a9486fa07bbd6eb8b16ce8a93cfc5cbdb6"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "size": 4323,
+      "sha256": "0c1708985f1f8d740f62d738dc1e4b6cb11920dbd51e5fba67a499a3f6e11769"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "size": 81,
+      "sha256": "43b3d95f317a3be0df7056348527429c95b40eabfff53e4168a520bb7511d879"
+    },
+    {
+      "path": "android/gradlew",
+      "size": 245,
+      "sha256": "7029327881df8c09c288f7cbe4c66115c0e2ef753375d1b2dd9980a887803f8b"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "size": 477,
+      "sha256": "924e58b9ba6ec8f6f0ab348df252d3f53d53271ceea7615ff89a97c0862c66e7"
+    },
+    {
+      "path": "android/settings.gradle.kts",
+      "size": 318,
+      "sha256": "54166e07c48107a4383ec1e01fea513683e6070898843560af93575a3af133af"
+    },
+    {
+      "path": "android/tools/wrapper-src/org/gradle/wrapper/GradleWrapperMain.java",
+      "size": 4136,
+      "sha256": "0dacddeb1727147496d56d1458ae6e3558aa2049c54fc1ddce9d1a04e5db9ef5"
+    },
+    {
+      "path": "docs/COMPILAR_EXE_WINDOWS_DESDE_CERO.docx",
+      "size": 43678,
+      "sha256": "9e1733f02dfdff7e39b1fee2354c1bafd19d15c52070da20e66c87e94b6e1a62"
+    },
+    {
+      "path": "docs/COMPILAR_EXE_WINDOWS_DESDE_CERO.md",
+      "size": 9849,
+      "sha256": "bf6e8941b4f42c41877794cce7d0d5eb7cc3d014d5894bc5302ff34c5a87c937"
+    },
+    {
+      "path": "docs/ESTADO_DE_VALIDACION.md",
+      "size": 1979,
+      "sha256": "047949a3489eae806133e04aa6d996b58952164a886afc05570e40a7ad370089"
+    },
+    {
+      "path": "docs/INSTALACION_Y_PRUEBAS.md",
+      "size": 9166,
+      "sha256": "004bca36ba218471023ab8e4df5ebd9b3ee1445869d64786d54f466042c13b83"
+    },
+    {
+      "path": "esp32/.gitignore",
+      "size": 83,
+      "sha256": "ee50b4bda1731fe4de1f99781318546ce8ea8ad9f20b18677f18aede71697897"
+    },
+    {
+      "path": "esp32/CMakeLists.txt",
+      "size": 117,
+      "sha256": "7cf6c1260a7f7f0a5eba7e6a52237795f2fbe564dfcd197e25c4e0d05d5edbd1"
+    },
+    {
+      "path": "esp32/HARDWARE.md",
+      "size": 1339,
+      "sha256": "934c9e3e4ef9a49b056fcc947a7b56fc1c0875c7a6d27549d12f6f7d78ec621c"
+    },
+    {
+      "path": "esp32/main/CMakeLists.txt",
+      "size": 208,
+      "sha256": "aa254f6548eedb6c0568673f0e3c300e53e9f4d97401e7ec5ace1e2eb23b23cf"
+    },
+    {
+      "path": "esp32/main/config_local.h.example",
+      "size": 361,
+      "sha256": "5d0bade6002e4fcc8d2192122fddcb146ad3f09263ae49156e29ec0d1c8fc805"
+    },
+    {
+      "path": "esp32/main/main.c",
+      "size": 14708,
+      "sha256": "2b8002dc17f5cbe00ce24cf57b524e97965b223d383e5b2f7da2775e116811ae"
+    },
+    {
+      "path": "esp32/sdkconfig.defaults",
+      "size": 96,
+      "sha256": "c11992863019a86378d8f3db2d2bf8226bb0f26bcdb684fdd304d5772c667527"
+    },
+    {
+      "path": "protocol/RCP1.md",
+      "size": 3214,
+      "sha256": "1580f0f1fe4d1fc85db05392f9736dab39d4ae6998b6d1488fd509c4b7c64a26"
+    },
+    {
+      "path": "tests/test_protocol.py",
+      "size": 1670,
+      "sha256": "6a9451463540fc731ee6a1f496969c2a6db9989996d5ca3081258fa2ebb6e3d5"
+    },
+    {
+      "path": "tools/check_ffmpeg_windows.ps1",
+      "size": 453,
+      "sha256": "5b3d60488b72eec3d188bd4d54d5d47fac418ee636ac25e15817298b7200358b"
+    },
+    {
+      "path": "tools/check_sources.py",
+      "size": 3480,
+      "sha256": "aec52fc9cea11df2ca495dda3c16513fc567cb0a6da69569077cf748595e2b58"
+    },
+    {
+      "path": "tools/configure_windows_firewall.ps1",
+      "size": 623,
+      "sha256": "44fe1f3995f99bee780f1f520a99fabdd5d319036690f552d3a693bebe65e28c"
+    },
+    {
+      "path": "tools/esp32_pair_qr.py",
+      "size": 871,
+      "sha256": "00cf7d93efd87443c414c7953fd19117c37665d7cecd187b490c60882e085a99"
+    },
+    {
+      "path": "tools/provision_esp32.py",
+      "size": 3180,
+      "sha256": "95770775afd5479bc3b44606820b672483444699a793389e1926774530987dbc"
+    },
+    {
+      "path": "tools/test_all.ps1",
+      "size": 633,
+      "sha256": "5b039cf7e6a3db86d1f3a585d95d96918e81b57260dd20e068613744d5350bfe"
+    },
+    {
+      "path": "windows/ControlRemoto.UI/App.xaml",
+      "size": 3642,
+      "sha256": "356d99a06857cb61268878df7631eb23d6472ac960918292696338756b9c1e5e"
+    },
+    {
+      "path": "windows/ControlRemoto.UI/App.xaml.cs",
+      "size": 93,
+      "sha256": "a285251f75508717d0212f5e335d9d14df78aff48828d6604fe7635a91c5dfe8"
+    },
+    {
+      "path": "windows/ControlRemoto.UI/ControlRemoto.UI.csproj",
+      "size": 557,
+      "sha256": "cf3c84a8c22b2a5c03b749d1d87f6419291c8ac9b39ef1906635df43c9c2d15f"
+    },
+    {
+      "path": "windows/ControlRemoto.UI/MainWindow.xaml",
+      "size": 8381,
+      "sha256": "5fbed3f4717b11fa3a17398e9f48ff3c872aa92b461fb027a6c0f1c4fd10799f"
+    },
+    {
+      "path": "windows/ControlRemoto.UI/MainWindow.xaml.cs",
+      "size": 13282,
+      "sha256": "5686a2f0b84ed4f92307332283b5215731a4eebc6a19abcc85a80a099d928266"
+    },
+    {
+      "path": "windows/ControlRemoto.UI/build_windows.ps1",
+      "size": 829,
+      "sha256": "a13ccee13320d88bc4ff8188dd45e92c3cb32aceda6b214305f4c2270eb6b878"
+    },
+    {
+      "path": "windows/RemoteHost/Desktop.cs",
+      "size": 7496,
+      "sha256": "8e380f63c1e85dd860c16166bdad6b0bfeb85bfee5401e2fcb8dc1ed5f05a40d"
+    },
+    {
+      "path": "windows/RemoteHost/GamepadKeyboardBridge.cs",
+      "size": 5420,
+      "sha256": "8e5b8e78ede20a3a42aa46ff8d19938b1c474e4ca7d46845123529801d724de9"
+    },
+    {
+      "path": "windows/RemoteHost/HardwareH264Capture.cs",
+      "size": 6423,
+      "sha256": "0e6fcdfa0d3da0215d6b274227f647f582b755539c36e234a9b578f26b2b4cd3"
+    },
+    {
+      "path": "windows/RemoteHost/HostState.cs",
+      "size": 7520,
+      "sha256": "ec7e17cd319b8bb2fa06e2fa18744e8f92aa47b5d57f306077c535eee9e44ce6"
+    },
+    {
+      "path": "windows/RemoteHost/PcKeyboardBridge.cs",
+      "size": 5669,
+      "sha256": "3675b1509e89f9d2244c9211bc5f0ecdc11b9f7723d3f8ff06a00263a34f6aef"
+    },
+    {
+      "path": "windows/RemoteHost/Program.cs",
+      "size": 22967,
+      "sha256": "7160cd6794f0405c8a93e2cb4e4e3586e356369c7e797e14d025e4585d1a46d1"
+    },
+    {
+      "path": "windows/RemoteHost/RemoteHost.csproj",
+      "size": 560,
+      "sha256": "283cde3c4f09e031ec5354086c81543c23681741efdaf6f972a0f6b31696b716"
+    },
+    {
+      "path": "windows/RemoteHost/VirtualGamepadBridge.cs",
+      "size": 5075,
+      "sha256": "ab2b8af55f6b80ac63636687ba1ceacfd69d16fb53d59c4beb5a0262ac8a819e"
+    },
+    {
+      "path": "windows/RemoteHost/WasapiAudioStreamer.cs",
+      "size": 4747,
+      "sha256": "a8f2062123b1f3b7ab34324d1db7d6570b384d1008a8e473a0c92b33443d3a72"
+    }
+  ]
+}

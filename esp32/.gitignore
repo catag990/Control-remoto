@@ -1,0 +1,6 @@
+main/server.crt
+main/server.key
+main/config_local.h
+build/
+sdkconfig
+sdkconfig.old
